@@ -1,0 +1,22 @@
+<%- include('header') -%>
+    <div class="box" id="heading">
+        <h1>
+            <%= nameofaction %>
+        </h1>
+    </div>
+
+    <div class="box">
+        <% for(var i=0; i<workitemlist.length; i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p>
+                    <%= workitemlist[i]%>
+                </p>
+            </div>
+        <%}%>
+        <form class="item" action="/" method="POST">
+            <input type="text" placeholder="New Item" name="task">
+            <button type="submit" name="button" value="work">+</button>
+        </form>
+    </div>
+    <%- include('footer.ejs')%>

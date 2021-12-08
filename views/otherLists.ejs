@@ -1,0 +1,22 @@
+<%- include ('header') -%>
+
+    <div class="box heading">
+        <h1>Available Lists</h1>
+    </div>
+    <div class="box">
+        <% listArr.forEach(function(list){ %>
+            <form action="/deleteList" method="POST">
+                <div class="item">
+                    <input type="checkbox" name="checkbox" value="<%=list._id %>" onchange="this.form.submit()">
+                    <p>
+                        <%= list.name%>
+                    </p>
+                </div>
+            </form>
+            <%})%>
+                <form class="item" action="/addList" method="POST">
+                    <input type="text" placeholder="New List" name="newList">
+                    <button type="submit">+</button>
+                </form>
+    </div>
+    <%- include("footer") -%>
