@@ -8,9 +8,9 @@
             <form action="/deleteList" method="POST">
                 <div class="item">
                     <input type="checkbox" name="checkbox" value="<%=list._id %>" onchange="this.form.submit()">
-                    <p>
+                    <a href="<%= list.name%>">
                         <%= list.name%>
-                    </p>
+                    </a>
                 </div>
             </form>
             <%})%>

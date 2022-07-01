@@ -1,12 +1,14 @@
 <%- include('header') -%>
-    <div class="box heading">
-        <h1>
-            <%= listTitle %>
-        </h1>
-    </div>
     <div class="box" id="other">
-        <a href="/availablelists">All lists</a>
+        <a href="/availablelists">View All Lists</a>
     </div>
+
+    <div class="box heading">
+        <h2>
+            Current List => <%= listTitle %>
+        </h2>
+    </div>
+
     <div class="box">
         <% newitemlist.forEach(function(element){ %>
             <form action="/delete" method="POST">

@@ -5,7 +5,7 @@ html {
   font-family: "helvetica neue";
 }
 
-h1 {
+h2 {
   color: #fff;
   padding: 10px;
 }
@@ -22,12 +22,19 @@ h1 {
   background-color: #a683e3;
   text-align: center;
 }
-#other {
+#other{
+  text-align: center;
+    padding: 8px;
+}
+/* .box {
   text-align: center;
   padding: 8px;
+} */
+.box a:link {
+  text-decoration: none;
 }
-#other a {
-  /* text-decoration: none; */
+.box a:hover {
+  color: blue;
 }
 .item {
   min-height: 70px;
